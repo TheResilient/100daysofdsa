@@ -4,7 +4,7 @@
 
 **Today's Progress**: Started with DSA on CodeChef.
 
-**Thoughts:** Solved basic problems that were posted after the contests previosly held.
+**Thoughts:** Solved Easy Problems to get started that were posted after the contests previosly held.
 
 **Link to work:** Check Day 01 file### Day 0: August 21, 2023
 
@@ -12,7 +12,7 @@
 
 **Today's Progress**: Second Level Problems DSA on CodeChef.
 
-**Thoughts:** Solved basic+ problems that were posted after the contests previosly held.
+**Thoughts:** Solved complexity analysis + basics warm up that were posted after the contests previosly held.
 
 **Link to work:** Check Day 02 file
 
