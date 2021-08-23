@@ -44,15 +44,20 @@ int a[N];
 
 
 void solution() {
-
+    while(true){
+        int input;
+        cin>>input;
+        if(input==42) break;
+        else{
+            cout<<input<<endl;
+        }
+    }
 
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    int t = 1;
-    si(t);
-    while(t--) {
-        solution();
-    }
+    
+    solution();
+    
     return 0;
 }

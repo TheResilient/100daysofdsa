@@ -44,7 +44,13 @@ int a[N];
 
 
 void solution() {
-
+    int c,b;
+    cin>>b;
+    c=0;
+    for(int i=1; pow(5,i)<=b; i++){
+        c=c+b/pow(5,i);
+    }
+    cout<<c<<endl;
 
 }
 int main() {

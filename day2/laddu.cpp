@@ -48,6 +48,46 @@ void solution() {
     //top contributor = 300
     //bug finder = 50->1000
     //contest hosting = 50
+    //INDIAN, NON_INDIAN, CONTEST_WON, TOP_CONTRIBUTOR, BUG_FOUND, CONTEST_HOSTED
+    int activities, MAX;
+    int sum=0;
+    string origin;
+    cin>>activities>>origin;
+    for(int i=0; i<activities; i++){
+        string category;
+        cin>>category;
+        if(category=="TOP_CONTRIBUTOR") {
+            sum+=300;
+            // cout<<sum<<endl;
+        }
+        if(category=="CONTEST_WON"){
+            int rank;
+            cin>>rank;
+            if(rank<=20){
+                sum+=(300+20-rank);
+            }
+            // cout<<sum<<endl;
+        }
+        if(category=="BUG_FOUND"){
+            int severity;
+            cin>>severity;
+            sum+=severity;
+            // cout<<sum<<endl;        
+        }
+        if(category=="CONTEST_HOSTED") {
+            sum+=50;
+            // cout<<sum<<endl;
+        }
+    }
+    int redeem;
+    if(origin=="INDIAN") {
+        redeem=floor(sum/200);
+    }
+    if(origin=="NON_INDIAN"){
+        redeem=floor(sum/400);
+    }
+    cout<<redeem<<endl;
+
 
 }
 int main() {
