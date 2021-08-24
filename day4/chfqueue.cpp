@@ -42,7 +42,7 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-
+//not done see demo.py which is solution from codechef editorial
 void solution() {
     int n,k;
     cin>>n>>k;
