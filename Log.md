@@ -30,4 +30,12 @@
 
 **Thoughts:** Solved linear data structure part 2 that were posted after the contests previosly held.
 
-**Link to work:** Check Day 03 file
+**Link to work:** Check Day 04 file
+
+### Day 5: August 25, 2023
+
+**Today's Progress**: STL Problems DSA on CodeChef.
+
+**Thoughts:** Solved # that were posted after the contests previosly held.
+
+**Link to work:** Check Day 05 file
