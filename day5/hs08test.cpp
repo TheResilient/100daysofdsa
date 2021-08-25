@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include<algorithm>
+#include <iomanip> 
 using namespace std;
 #define gc getchar_unlocked
 #define ll long long
@@ -44,20 +45,29 @@ int a[N];
 
 
 void solution() {
-    int n, m;
-    cin>>n>>m;
-    int arr[n], brr[m];
-    for(int i=0; i<n; i++) cin>>arr[i];
-    for(int i=0; i<m; i++) cin>>brr[i];
-    int value = m+n-1;
-    
+    int n;
+    double bal;
+    cin>>n>>bal;
+    if(n>(int)bal) {
+        cout<<bal<<endl;
+        return;
+    }
+    else if(n%5!=0){
+        cout<<bal<<endl;
+        return;
+    }
+    else if(n%5==0){
+        bal=bal-n-0.50;
+    }
+    cout<<setprecision(2)<<bal<<endl;
 
 }
-
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    
-    solution();
-    
+    int t = 1;
+    si(t);
+    while(t--) {
+        solution();
+    }
     return 0;
 }
