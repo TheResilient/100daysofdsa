@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include<algorithm>
+#include<queue>
 using namespace std;
 #define gc getchar_unlocked
 #define ll long long
@@ -42,24 +43,46 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-
+//using priority queue
 void solution() {
-    int n,z;
-    cin>>n>>z;
-    int arr[n];
-    for(int i=0; i<n; i++) cin>>arr[i];
-    sort(arr, arr+n);
-    int j=n-1;
-    int count=0;
-    while(z>0){
-        z=z-arr[j];
-        arr[j]=arr[j]/2;
-        j--;
-        count=count+1;
-        if(j==-1){
-            j=n-1;
-        }
+    int pPain,total_sol;
+    cin >> total_sol >> pPain;
+    priority_queue<int> sol;
+    int power;
+    for(int i=0;i<total_sol;i++){
+    	cin >> power;
+    	sol.push(power);
     }
+    	
+    int count = 0;
+    while(sol.top() > 0 && pPain > 0){
+        pPain -= sol.top();
+    	sol.push(floor(sol.top()/2));
+    	sol.pop();
+    	count++;
+    }
+    // long n,K;
+    // cin>>n>>K;
+    // priority_queue<int>arr;
+    // for(int i=0; i<n; i++) {
+    //     cin>>k;
+    //     arr.push(k);
+    // }
+    
+    // int j=n-1;
+    // int count=0;
+    // while(z>0){
+    //     z=z-arr.top();
+    //     long t=arr.top()/2;
+    //     arr.pop();
+    //     arr.push(t);
+    //     j--;
+    //     count=count+1;
+    //     if(j==-1){
+    //         j=n-1;
+    //     }
+    // }
+
     cout<<count<<endl;
 
 }
