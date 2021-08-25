@@ -36,6 +36,6 @@
 
 **Today's Progress**: STL Problems DSA on CodeChef.
 
-**Thoughts:** Solved # that were posted after the contests previosly held.
+**Thoughts:** Solved standard templete library that were posted after the contests previosly held.
 
 **Link to work:** Check Day 05 file
