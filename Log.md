@@ -39,3 +39,11 @@
 **Thoughts:** Solved standard templete library that were posted after the contests previosly held.
 
 **Link to work:** Check Day 05 file
+
+### Day 6: August 26, 2023
+
+<!-- **Today's Progress**: STL Problems DSA on CodeChef.
+
+**Thoughts:** Solved standard templete library that were posted after the contests previosly held.
+
+**Link to work:** Check Day 05 file -->

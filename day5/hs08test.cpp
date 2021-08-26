@@ -45,29 +45,27 @@ int a[N];
 
 
 void solution() {
-    int n;
+    double n;
     double bal;
     cin>>n>>bal;
-    if(n>(int)bal) {
+    if(n>bal) {
         cout<<bal<<endl;
         return;
     }
-    else if(n%5!=0){
+    else if((int)n%5!=0){
         cout<<bal<<endl;
         return;
     }
-    else if(n%5==0){
+    else if((int)n%5==0){
         bal=bal-n-0.50;
     }
-    cout<<setprecision(2)<<bal<<endl;
+    cout<< fixed << setprecision(2) <<bal<<endl;
 
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    int t = 1;
-    si(t);
-    while(t--) {
-        solution();
-    }
+    
+    solution();
+    
     return 0;
 }
