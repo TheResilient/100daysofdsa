@@ -42,13 +42,11 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
+
 void solution() {
-    string n;
+    int n;
     cin>>n;
-    for(int i=n.length()-1; i>=0; i--){
-        cout<<n[i];
-    }
-    cout<<endl;
+    cout<<(int)sqrt(n)<<endl;
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
