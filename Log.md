@@ -42,8 +42,16 @@
 
 ### Day 6: August 26, 2023
 
-<!-- **Today's Progress**: STL Problems DSA on CodeChef.
+**Today's Progress**: Beginner level Problems DSA on CodeChef.
 
-**Thoughts:** Solved standard templete library that were posted after the contests previosly held.
+**Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
 
-**Link to work:** Check Day 05 file -->
+**Link to work:** Check Day 06 file
+
+### Day 7: August 27, 2023
+
+<!-- **Today's Progress**: Beginner level Problems DSA on CodeChef.
+
+**Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
+
+**Link to work:** Check Day 06 file -->
