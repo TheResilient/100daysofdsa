@@ -44,15 +44,23 @@ int a[N];
 
 
 void solution() {
-//// start here
+    int n;
+    int e=0, o=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+        if(arr[i]%2==0) e++;
+        else o++;
+    }
+    if(e>o) cout<<"READY FOR BATTLE"<<endl;
+    else cout<<"NOT READY"<<endl;
 
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    int t = 1;
-    si(t);
-    while(t--) {
-        solution();
-    }
+    
+    solution();
+    
     return 0;
 }
