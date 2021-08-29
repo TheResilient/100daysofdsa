@@ -50,8 +50,17 @@
 
 ### Day 7: August 27, 2023
 
-<!-- **Today's Progress**: Beginner level Problems DSA on CodeChef.
+**Today's Progress**: Beginner level Problems DSA on CodeChef.
 
 **Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
-//amr15a.cpp
-**Link to work:** Check Day 06 file -->
+
+**Link to work:** Check Day 06 file
+
+### Day 7: August 27, 2023
+
+**Today's Progress**: Beginner level Problems DSA on CodeChef.
+
+**Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
+
+**Link to work:** Check Day 06 file
+
