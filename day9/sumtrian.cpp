@@ -42,33 +42,35 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-int max1(int arr){
-    int max=0;
-    int size= sizeof(arr)/sizeof(arr[0]);
-    for(int i=0; i<size; i++){
-        if(arr[i]>max){
-            max=arr[i];
-        }
-    }
-    return max;
-}
+// int max1(int arr[], int size){
+//     int max=arr[0];
+    
+//     for(int i=1; i<size; i++){
+//         if(arr[i]>max){
+//             max=arr[i];
+//         }
+//         else continue;
+//     }
+//     cout<<max<<endl;
+//     return max;
+// }
 
 
 void solution() {
-    int n, sum=0;
+    int n;
     cin>>n;
-    int arr[n][n];
+    int sum=0;
+    int k=1;
     for(int i=0; i<n; i++){
-        int k=1;
+        int arr[k];
         for(int j=0; j<k; j++){
-            cin>>arr[i][j];
-            k++;
+            cin>>arr[j];
         }
-        int max= max1(arr[i]);
-        sum+=max;
+        k++;
+        cout<<(int)*max_element(arr, arr+k)<<endl;
+        sum+=*max_element(arr, arr+k);
     }
     cout<<sum<<endl;
-
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
