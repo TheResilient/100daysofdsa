@@ -32,6 +32,7 @@ typedef vector<pii> vpii;
 typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
+#include <queue>
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 int rng(int lim) {
     uniform_int_distribution<int> uid(0,lim-1);
@@ -44,8 +45,28 @@ int a[N];
 
 
 void solution() {
-
-
+    int n;
+    cin>>n;
+    priority_queue<int, vector<int>, greater<int>> q;
+    for(int i=0; i<n; i++){
+        int j;
+        cin>>j;
+        q.push(j);
+    }
+    cout<<"----------------------"<<endl;
+    int top = q.top();
+    q.pop();
+    int second = q.top();
+    q.push(top);
+    if(second%top==0){
+        while(!q.empty()){
+            cout<<q.top()<<endl;
+            q.pop();
+        }
+    }
+    else{
+        
+    }
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
