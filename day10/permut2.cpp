@@ -56,6 +56,10 @@ void solution() {
         cin>>size;
         if(size==0) break;
         else{
+            int arr[size];
+            for(int i=0; i<size; i++){
+                cin>>arr[i];
+            }
             int brr[size];
             int k=0;
             for(int i=0; i<size; i++){
@@ -66,19 +70,29 @@ void solution() {
                     }
                 }
             }
-            int len = *(&arr + 1) - arr;
+            int tru=0;
+            int len = size;
             for(int i=0; i<len; i++){
-                cout<<brr[i]<<endl;
+                if(brr[i]==arr[i]){
+                    tru++;
+                }
+                else{
+                    tru=0;
+                }
+            }
+            if(tru==size){
+                cout<<"ambiguous"<<endl;
+            }
+            else{
+                cout<<"not ambiguous"<<endl;
             }
         }
+        // cout<<endl;
     }
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    int t = 1;
-    si(t);
-    while(t--) {
-        solution();
-    }
+    solution();
+    
     return 0;
 }
