@@ -54,13 +54,29 @@
 
 **Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
 
-**Link to work:** Check Day 06 file
+**Link to work:** Check Day 07 file
 
-### Day 7: August 27, 2023
+### Day 8: August 28, 2023
 
 **Today's Progress**: Beginner level Problems DSA on CodeChef.
 
 **Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
 
-**Link to work:** Check Day 06 file
+**Link to work:** Check Day 8 file
+
+### Day 9: August 29, 2023
+
+**Today's Progress**: Beginner level Problems DSA on CodeChef.
+
+**Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
+
+**Link to work:** Check Day 09 file
+
+### Day 10: August 30, 2023
+
+**Today's Progress**: Beginner level Problems DSA on CodeChef.
+
+**Thoughts:** started with dificulty wise level problems that were posted after the contests previosly held.
+
+**Link to work:** Check Day 09 file
 
