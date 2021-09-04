@@ -44,8 +44,12 @@ int a[N];
 
 
 void solution() {
-    
-
+    string s;
+    cin>>s;
+    for(int i=s.length()-1; i>=0; i--){
+        cout<<s[i];
+    }
+    cout<<endl;
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
