@@ -44,7 +44,22 @@ int a[N];
 
 
 void solution() {
-    
+    int k,n;
+    int sum=0;
+    cin>>k>>n;
+    int arr[n];
+    for(int i=0; i<n; i++) {
+        cin>>arr[i];
+        sum+=arr[i];
+    }
+    int average=sum/n;
+    for(int i=0; i<n; i++){
+        if(arr[i]>=average) arr[i]-=k;
+        else{
+            arr[i]+=k;
+        }
+    }
+    cout<<arr[n-1]-arr[0]<<endl;
 
 }
 int main() {
