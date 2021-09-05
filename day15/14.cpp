@@ -44,19 +44,12 @@ int a[N];
 
 
 void solution() {
-    int n;
-    cin>>n;
+    int n,k;
+    cin>>n>>k;
     int arr[n];
-    for(int i=0; i<n; i++) cin>>arr[i];
-    int max=0;
-    int maxend=0;
-    for(int i=0; i<n; i++)
-    {
-        maxend=max+arr[i];
-        if(maxend<0) maxend=0;
-        if(max<maxend) max=maxend;
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
     }
-    cout<<max<<endl;
 
 }
 int main() {
