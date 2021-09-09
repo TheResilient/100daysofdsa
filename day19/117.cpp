@@ -44,34 +44,15 @@ int a[N];
 
 
 void solution() {
-    int N;
-    cin>>N;
-    int arr[N];
-    for(int i=0; i<N; i++){
-        cin>>arr[i];
-    }
-    int brr[N];
-    int m=0;
-    for(int j=0; j<N; j++){
-        int product=1;
-        for(int i=0; i<N; i++){
-            if(i==m) {
-                continue;
-            }
-            else{
-                product=product*arr[i];
-            }
-        }
-        m++;
-        brr[j]=product;
-    }
-    for(int i=0; i<N ;i++){
-        cout<<brr[i]<<" ";
-    }
-    cout<<endl;
+
+
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-    solution();
+    int t = 1;
+    si(t);
+    while(t--) {
+        solution();
+    }
     return 0;
 }
