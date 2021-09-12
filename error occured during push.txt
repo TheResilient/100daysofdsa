@@ -1,0 +1,11 @@
+PS D:\100daysofdsa> git push origin master
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (39/39), 129.57 KiB | 4.32 MiB/s, done.
+Total 39 (delta 21), reused 0 (delta 0), pack-reused 0
+error: RPC failed; curl 18 transfer closed with outstanding read data remaining
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
