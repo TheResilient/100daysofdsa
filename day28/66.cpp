@@ -42,15 +42,27 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-void permutation(string str){
-    int n=str.length();
-    for(int i=l; i<=r; i++){
-        swap(())
-    }
-}
+void permute(char *a, int l, int r) 
+{ 
+	int i; 
+	if (l == r) 
+		cout<<a<<endl; 
+	else
+	{ 
+		for (i = l; i <= r; i++) 
+		{ 
+			swap((a+l), (a+i)); 
+			permute(a, l+1, r); 
+			swap((a+l), (a+i)); //backtrack 
+		} 
+	} 
+} 
 
 void solution() {
-
+    string s;
+    cin>>s;
+    char str[]="abc";
+    permute(str, 0, s.length());
 
 }
 int main() {
