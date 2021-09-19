@@ -42,6 +42,12 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
+void permutation(string str){
+    int n=str.length();
+    for(int i=l; i<=r; i++){
+        swap(())
+    }
+}
 
 void solution() {
 
