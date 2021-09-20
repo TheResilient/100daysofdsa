@@ -42,9 +42,24 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
+void permut(string s[], int l, int r){
+    if(l==r) cout<<s[l]<<" ";
+    else{
+        for(int i=l; i<=r; i++){
+            swap(s[l], s[i]);
+            permut(s, l+1, r);
+            swap(s[l], s[i]);
+        }
+    }
+
+}
 
 void solution() {
-
+    int n;
+    cin>>n;
+    string arr[n];
+    for(int i=0; i<n; i++) cin>>arr[i];
+    permut(arr, 0, n);
 
 }
 int main() {
