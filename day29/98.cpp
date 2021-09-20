@@ -16,6 +16,9 @@ using namespace std;
 #define deba(i, a, n) fo(i, n){cout << a[i] << " ";}
 #define pb push_back
 #define mp make_pair
+
+#define R 3
+#define C 3
 #define F first
 #define S second
 #define all(x) x.begin(), x.end()
@@ -42,24 +45,46 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-void permut(string s[], int l, int r){
-    if(l==r) cout<<s[l]<<" ";
-    else{
-        for(int i=l; i<=r; i++){
-            swap(s[l], s[i]);
-            permut(s, l+1, r);
-            swap(s[l], s[i]);
-        }
+void printUtil(string arr[R][C], int m, int n, string output[R])
+{
+    // Add current word to output array
+    output[m] = arr[m][n];
+ 
+    // If this is last word of current output sentence, then print
+    // the output sentence
+    if (m==R-1)
+    {
+        for (int i=0; i<R; i++)
+           cout << output[i] << " ";
+        cout << endl;
+        return;
     }
-
+ 
+    // Recur for next row
+    for (int i=0; i<C; i++)
+       if (arr[m+1][i] != "")
+          printUtil(arr, m+1, i, output);
+}
+ 
+// A wrapper over printUtil()
+void print(string arr[R][C])
+{
+   // Create an array to store sentence
+   string output[R];
+ 
+   // Consider all words for first row as starting points and
+   // print all sentences
+   for (int i=0; i<C; i++)
+     if (arr[0][i] != "")
+        printUtil(arr, 0, i, output);
 }
 
 void solution() {
-    int n;
-    cin>>n;
-    string arr[n];
-    for(int i=0; i<n; i++) cin>>arr[i];
-    permut(arr, 0, n);
+    
+    string arr[R][C]={{"you", "we"},
+                        {"have", "are"},
+                        {"sleep", "eat", "drink"}};
+    print(arr);
 
 }
 int main() {
