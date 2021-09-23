@@ -44,7 +44,25 @@ int a[N];
 
 
 void solution() {
-
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++) cin>>arr[i];
+    int brr[n-1];
+    int k=0;
+    for(int i=1; i<n; i++){
+        brr[k]=arr[i]-arr[i-1];
+    }
+    int g;
+    int l=brr[0],m=0,o=0;
+    for(int i=1; i<n-1; i++){
+        if(brr[i]==l) m++;
+        else {
+            o++;
+            g=brr[i];
+        }
+    }
+    cout<<g<<endl;
 
 }
 int main() {
