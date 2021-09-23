@@ -60,6 +60,7 @@ void solution() {
         else {
             o++;
             g=brr[i];
+            cout<<g<<endl;
         }
     }
     cout<<g<<endl;
