@@ -51,20 +51,26 @@ void solution() {
         cout<<-1<<endl;
         return;
     }
-    int sum=0;
-    for(int i=0; i<s.length(); i++){
-        if(s[i]=='{') sum++;
-        else sum--;
+    stack<char> st;
+    for (int i=0; i<s.length(); i++)
+    {
+        if (s[i]=='}' && !st.empty())
+        {
+            if (st.top()=='{')
+                st.pop();
+            else
+                st.push(s[i]);
+        }
+        else
+            st.push(s[i]);
     }
-    if(sum<0){
-        sum=sum*(-1);
-        cout<<sum+1<<endl;
-        return;
+    int len=st.size();
+    int n=0;
+    while(!st.empty() && st.top()=='{'){
+        st.pop();
+        n++;
     }
-    else{
-        cout<<sum+1<endl;
-        return;
-    }
+    cout<<len/2 + n%2<<endl;
 
 }
 int main() {
