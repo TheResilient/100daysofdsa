@@ -44,7 +44,17 @@ int a[N];
 
 
 void solution() {
-    
+    int n;
+    cin>>n;
+    stack<int> st;
+    for(int i=0; i<n; i++){
+        char c;
+        cin>>c;
+        if(c=='(') st.push(1);
+        else st.pop();
+    }
+    if(st.empty()) cout<<"Balanced"<<endl;
+    else cout<<"Not balanced"<<endl;
 
 }
 int main() {
