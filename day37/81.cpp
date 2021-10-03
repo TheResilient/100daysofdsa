@@ -42,36 +42,64 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-char min(char a, char b){
-    if(a=='I' and b!='I') return a;
-    else if(a!='I' and b=='I') return b;
-    else if(a=='V' and b!='V') return a;
-    else if(a!='V' and b=='V') return b;
-    else if(a=='X' and b!='X') return a;
-    else if(a!='X' and b=='X') return b;
-    else if(a=='L' and b!='L') return a;
-    else if(a!='L' and b=='L') return b;
-    else if(a=='C' and b!='C') return a;
-    else if(a!='C' and b=='C') return b;
-    else if(a=='D' and b!='D') return a;
-    else if(a!='D' and b=='D') return b;
-    else if(a=='M' and b!='M') return a;
-    else if(a!='M' and b=='M') return b;
-    else if(a==b) return a;
+// char min(char a, char b){
+//     if(a=='I' and b!='I') return a;
+//     else if(a!='I' and b=='I') return b;
+//     else if(a=='V' and b!='V') return a;
+//     else if(a!='V' and b=='V') return b;
+//     else if(a=='X' and b!='X') return a;
+//     else if(a!='X' and b=='X') return b;
+//     else if(a=='L' and b!='L') return a;
+//     else if(a!='L' and b=='L') return b;
+//     else if(a=='C' and b!='C') return a;
+//     else if(a!='C' and b=='C') return b;
+//     else if(a=='D' and b!='D') return a;
+//     else if(a!='D' and b=='D') return b;
+//     else if(a=='M' and b!='M') return a;
+//     else if(a!='M' and b=='M') return b;
+//     else if(a==b) return a;
     
+// }
+
+int value(char r){
+    if(r=='I') return 1;
+    if(r=='V') return 5;
+    if(r=='X') return 10;
+    if(r=='L') return 50;
+    if(r=='C') return 100;
+    if(r=='D') return 500; 
+    if(r=='M') return 1000;
+    return -1;
 }
 
-int romantodecimal(string s){
-    int len = s.length();
-    char first = s[0];
-    for(int i=1; i<len; i++){
-        min(s[i-1], s[i])
+int romantodecimal(string str){
+    int len = str.length();
+    int res=0;
+    for(int i=0; i<len; i++){
+        int s1=value(str[i]);
+        if(i+1<len){
+            int s2 = value(str[i+1]);
+            if(s1>=s2){
+                res = res +s1;
+            }
+            else{
+                res=res+s2-s1;
+                i++;
+            }
+        }
+        else{
+            res=res+s1;
+        }
     }
+    return res;
+    
 
 }
 
 void solution() {
-
+    string s;
+    cin>>s;
+    cout<<romantodecimal(s)<<endl;
 
 }
 int main() {
