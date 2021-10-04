@@ -69,11 +69,13 @@ int hop(string s, int n){
         }
         else k=0;
     }
-    cout<<sum<<endl;
+    return sum;
 }
 
 void solution() {
-
+    string s;
+    cin>>s;
+    cout<<hop(s, s.length())<<endl;
 
 }
 int main() {
