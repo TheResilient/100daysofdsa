@@ -45,14 +45,14 @@ int a[N];
 
 void solution() {
     int n;
-    cin>>s;
+    cin>>n;
     string pos;
     cin>>pos;
     int p=0;
     int sum=0;
     for(int i=0; i<n; i++){
         if(p<0){
-            sum+=pos[p]-i;
+            sum++;
             p=0;
         }
         if(pos[i]=='['){
@@ -60,6 +60,7 @@ void solution() {
         }
         else p--;
     }
+    cout<<sum<<endl;
 
 }
 int main() {
