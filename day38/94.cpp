@@ -57,15 +57,26 @@ void solution() {
     for(int i=0; i<n; i++) cin>>s[i];
     int count[n];
     for(int i=0; i<n; i++){
+        // cout<<s[i]<<endl;
         count[i]=findcount(s, s[i], n);
+        // cout<<count[i];
     }
     int count1[n];
+    
     for(int i=0; i<n; i++) count1[i]=count[i];
     sort(count, count+n);
-    int second=count[1];
+    int second;
+    for(int i=n-1; i>=0; i--){
+        if(count[i]!=count[n-1]){
+            second=count[i];
+            break;
+        }
+    }
+    // cout<<count[n-1];
     for(int i=0; i<n; i++){
         if(count1[i]==second){
             cout<<s[i]<<endl;
+            break;
         }
     }
 
