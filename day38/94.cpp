@@ -59,7 +59,8 @@ void solution() {
     for(int i=0; i<n; i++){
         count[i]=findcount(s, s[i], n);
     }
-    int count1[n]=count;
+    int count1[n];
+    for(int i=0; i<n; i++) count1[i]=count[i];
     sort(count, count+n);
     int second=count[1];
     for(int i=0; i<n; i++){
