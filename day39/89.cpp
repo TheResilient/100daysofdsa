@@ -42,9 +42,39 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
+bool ispalindrome(string s)
+{
+    int l = s.length();
+    int j;
+     
+    for(int i = 0, j = l - 1; i <= j; i++, j--)
+    {
+        if(s[i] != s[j])
+            return false;
+    }
+    return true;
+}
 
 void solution() {
-
+    string s;
+    cin>>s;
+    int flag = 0, cnt=0;
+    while(s.length()>0)
+    {
+        // if string becomes palindrome then break
+        if(ispalindrome(s))
+        {
+            flag = 1;
+             break;
+        }
+        else
+        {
+        cnt++;
+         
+        // erase the last element of the string
+        s.erase(s.begin() + s.length() - 1);
+        }
+    }
 
 }
 int main() {
