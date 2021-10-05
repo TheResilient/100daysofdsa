@@ -55,8 +55,8 @@ void solution() {
     string arr[n];
     for(int i=0; i<n; i++) cin>>arr[i];
     vector<string>omit;
-    for(int i=0; i<n; i++){
-        for(int j=i+1; j<n-1; j++){
+    for(int i=0; i<n-1; i++){
+        for(int j=i+1; j<n; j++){
             if(arr[i].length()==arr[j].length()){
                 if(check(arr[i], arr[j])){
                     cout<<arr[i]<<" "<<arr[j]<<endl;
