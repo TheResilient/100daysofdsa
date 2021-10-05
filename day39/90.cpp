@@ -75,6 +75,7 @@ void solution() {
         s.erase(s.begin() + s.length() - 1);
         }
     }
+    if(flag) cout<<cnt<<endl;
 
 }
 int main() {
