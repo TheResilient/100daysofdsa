@@ -42,16 +42,32 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
+int notcommon(string s, int n){
+    set<char>sss;
+    for(int i=0; i<n; i++) sss.insert(s[i]);
+    if(s.length()==sss.size()) return 1;
+    return 0;
+}
+
+string substring(string s, int start, int end){
+    string a="";
+    for(int i=start; i<end; i++){
+        a+=s[i];
+    }
+    return a;
+}
+
 void find(string s, int n){
-    stack<char> ss;
-    for(int i=0; i<n; i++){
-        ss.push(s[i]);
+    set<char> ss;
+    for(int i=0; i<n; i++) ss.insert(s[i]);
+    for(int i=0; i<=s.length()-ss.size(); i++){
+        if(notcommon(substring(s, i, i+ss.size()), ss.size())){
+            cout<<substring(s, i, i+ss.size())<<endl;
+            break;
+        }
     }
-    for(int i=0; i<ss.size(); i++){
-        cout<<ss.top();
-        ss.pop();
-    }
-    cout<<endl;
+
+    
 }
 
 void solution() {
