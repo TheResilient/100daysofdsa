@@ -57,15 +57,18 @@ void solution() {
             //  Print characters from current
             // starting point to current ending
             // point. 
-            int j = i + len - 1;           
-            for (int k = i; k <= j; k++)
-                s.push_back(s1[k]);
+            int j = i + len - 1;    
+            string sz="";
+            for (int k = i; k <= j; k++){
+                sz+=s1[k];
+            }
+            s.push_back(sz);
         }
     }
     vector<string>strr;
-    int min=0;
+    int min=INT_MAX;
     int flag;
-    int n=0;
+    int r=0;
     for(int i=0; i<s.size(); i++){
         string str = s.at(i);
         int sum=0;
@@ -78,13 +81,13 @@ void solution() {
             strr.push_back(str);
             if(str.length()<min){
                 min==str.length();
-                flag=n;
+                flag=r;
             }
-            n++;
+            r++;
         }
     }
 
-    cout<<strr.at(flag)<<endl;
+    for(int v=0; v<strr.size(); v++) cout<<strr.at(v)<<endl;
     // vector<string> vec;
     // int sum=0;
     // for(int i=0; i<n-1; i++){
