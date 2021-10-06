@@ -62,7 +62,7 @@ void solution() {
                 s.push_back(s1[k]);
         }
     }
-    vector<int>strr;
+    vector<string>strr;
     int min=0;
     int flag;
     int n=0;
