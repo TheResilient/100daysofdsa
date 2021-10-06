@@ -44,7 +44,7 @@ int a[N];
 
 #define MAX_CHAR 26
 
-int runCustomerSimulation(int n, const string *seq)
+int runCustomerSimulation(int n, string seq)
 {
     // seen[i] = 0, indicates that customer 'i' is not in cafe
     // seen[1] = 1, indicates that customer 'i' is in cafe but
