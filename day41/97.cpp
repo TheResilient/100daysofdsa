@@ -49,7 +49,7 @@ int checkiso(string a, string b){
         if(a[i]==a[i-1]) flag++;
         if(b[i]==b[i-1]) flag1++;
         if(a[i]!=a[i-1]) flag--;
-        if(a[i]!=b[i-1]) flag1--;
+        if(b[i]!=b[i-1]) flag1--;
         if(flag!=flag1) return 0;
     }
     return 1;
