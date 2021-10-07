@@ -77,13 +77,12 @@ void print(string arr[R][C])
 }
 
 void solution() {
-    int m,n;
-    cin>>m>>n;
-    string s[m][n];
-    for(int i=0; i<m; i++){
-        for(int j=0; j<n; j++) cin>>s[i][j];
-    }
-    print(s);
+    
+    string arr[3][3]  = {{"you", "we"},
+                        {"have", "are"},
+                        {"sleep", "eat", "drink"}};
+    
+    print(arr);
 
 }
 int main() {
