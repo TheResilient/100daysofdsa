@@ -55,7 +55,8 @@ void solution() {
     for(int i=0; i<q; i++){
         int z;
         cin>>z;
-        cout<<arr[z-1];
+        if(z>b-a+1) cout<<-1<<endl;
+        else cout<<arr[z-1]<<endl;
     }
 
 }
