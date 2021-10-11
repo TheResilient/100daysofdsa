@@ -65,16 +65,15 @@ void printCombination(int arr[], int n, int r)
    index  ---> Current index in data[]
    data[] ---> Temporary array to store current combination
    i      ---> index of current element in arr[]     */
-int * combinationUtil(int arr[], int n, int r, int index,
+void combinationUtil(int arr[], int n, int r, int index,
                      int data[], int i)
 {
     // Current combination is ready, print it
     if (index == r) {
-        int returna[r];
         for (int j = 0; j < r; j++)
-            returna[j]=data[j];
-        
-        return returna;
+            cout <<" "<< data[j];
+        cout <<"\n";
+        return;
     }
   
     // When no more elements are there to put in data[]
@@ -97,7 +96,7 @@ void solution() {
     int arr[n];
     for(int i=0; i<n; i++) cin>>arr[i];
     sort(arr, arr+n);
-
+    printCombination(arr, n, c);
 
 }
 int main() {
