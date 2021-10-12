@@ -42,13 +42,34 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-double checkap(int a, int b, int c){
-    double k = double((b-a)/c)+1;
-    return k;
+int checkdec(string s){
+    int i=0; 
+    while(true){
+        if(s[i]=='.') break;
+        i++;
+    }
+    i++;
+    string end="";
+    while(i<s.length()){
+        end+=s[i];
+        i++;
+    }
+    int num = stoi(end);
+    if(num>0){
+        return 1;
+    }
+    else return 0;
+}
+
+int checkap(double a, double b, double c){
+    double k =((b-a)/c)+1;
+    string s = to_string(k);
+    if(checkdec(s)) return 0;
+    else return 1;
 }
 
 void solution() {
-    int a,b,c;
+    double a,b,c;
     cin>>a>>b>>c;
     cout<< checkap(a,b,c)<<endl;
 
