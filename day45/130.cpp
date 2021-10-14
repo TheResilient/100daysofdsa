@@ -45,23 +45,25 @@ int a[N];
 void minadd(int arr[], int n){
     vector<int> result;
     int k=1;
-    while(k!=n){
+    while(k<n){
         int first=0;
         for(int i=0; i<k; i++){
             first+=arr[i];
         }
         int second=0;
-        for(int i=k; k<n; i++){
+        for(int i=k; i<n; i++){
             second+=arr[i];
         }
+        // cout<<first<<" "<<second<<endl;
         if(first>second) result.push_back(first);
         else result.push_back(second);
         k++;
     }
-    for(auto ele : result ){
-        cout<<ele<<" ";
-    }
-    cout<<endl;
+    // cout<<1<<endl;
+    int min=INT_MAX;
+    for(int i=0; i < result.size(); i++)
+        if(result.at(i)<min) min=result.at(i);
+    cout<<min<<endl;
 
 }
 
@@ -72,7 +74,8 @@ void solution() {
     for(int i=0; i<n; i++) cin>>arr[i];
     int m;
     cin>>m;
-    minadd(arr, n)
+    
+    minadd(arr, n);
 
 }
 int main() {
