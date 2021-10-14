@@ -42,7 +42,7 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-int findseq(int arr[], int brr[], int n, int m){
+void findseq(int arr[], int brr[], int n, int m){
     vector<int>crr;
     vector<int>first;
     vector<int>second;
@@ -55,9 +55,10 @@ int findseq(int arr[], int brr[], int n, int m){
             }
         }
     }
+    int total=0;
     int i1=0;
-    int k=first.at(0);
-    int k1=second.at(0);
+    int k=first.at(i1);
+    int k1=second.at(i1);
     while(i1<crr.size()+1){
         int j=first.at(k+1);
         if(first.at(k+1)>=n){
@@ -76,9 +77,11 @@ int findseq(int arr[], int brr[], int n, int m){
         for(int i=second.at(k1); i<p; i++){
             secondsum+=brr[i];
         }
-        cout<<firstsum<<" "<<secondsum<<endl;
+        if(firstsum>secondsum) total+=firstsum;
+        else total+=secondsum;
         i1++;
     }
+    cout<<total<<endl;
 }
 
 void solution() {
@@ -90,7 +93,7 @@ void solution() {
     cin>>m;
     int brr[m];
     for(int i=0; i<m; i++) cin>>brr[i];
-
+    findseq(arr, brr, n, m);
 
 
 }
