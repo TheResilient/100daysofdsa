@@ -44,18 +44,14 @@ int a[N];
 
 
 void solution() {
-    int arr[5];
-    int zero=0, one=0, two=0;
-    for(int i=0; i<5; i++) {
+    int arr[3];
+    int flag=0;
+    for(int i=0; i<3; i++){
         cin>>arr[i];
-        if(arr[i]==0) zero++;
-        if(arr[i]==1) one++;
-        if(arr[i]==2) two++;
+        if(arr[i]==7) flag=1;
     }
-    if(one==two) cout<<"DRAW"<<endl;
-    else if(one>two) cout<<"INDIA"<<endl;
-    else if(two>one) cout<<"ENGLAND"<<endl;
-
+    if(flag>0) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
 
 }
 int main() {
