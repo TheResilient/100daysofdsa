@@ -42,7 +42,6 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-
 void solution() {
     int arr[3];
     int flag=0;

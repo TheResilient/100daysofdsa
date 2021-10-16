@@ -42,7 +42,6 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-
 void solution() {
     int arr[5];
     int zero=0, one=0, two=0;
@@ -55,7 +54,6 @@ void solution() {
     if(one==two) cout<<"DRAW"<<endl;
     else if(one>two) cout<<"INDIA"<<endl;
     else if(two>one) cout<<"ENGLAND"<<endl;
-
 
 }
 int main() {
