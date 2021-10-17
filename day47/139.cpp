@@ -98,17 +98,17 @@ struct LinkedList {
 
 
 void solution() {
-    LinkedList ll;
+    LinkedList l;
     int n;
     cin>>n;
     for(int i=0; i<n; i++) {
         int m;
         cin>>m;
-        ll.push(m);
+        l.push(m);
     }
-    ll.print();
-    ll.reverse();
-    ll.print();
+    l.print();
+    l.reverse();
+    l.print();
 }
 int main() {
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
