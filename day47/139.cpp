@@ -108,6 +108,7 @@ void solution() {
     }
     l.print();
     l.reverse();
+    cout<<endl;
     l.print();
 }
 int main() {
