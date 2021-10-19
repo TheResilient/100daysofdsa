@@ -97,7 +97,7 @@ void solution() {
         push(&head, k);
     }
 
-    cout<<printlist(head);
+    printlist(head);
     removeduplicate(head);
     cout<<endl;
     printlist(head);
