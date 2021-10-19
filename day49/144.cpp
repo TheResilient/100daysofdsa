@@ -55,6 +55,7 @@ void removeduplicate(Node * head){
     if(current==NULL) return ;
     while(current->next!=NULL){
         if(current->data==current->next->data){
+            next_next=current->next->next;
             free(current->next);
             current->next=next_next;
         }
