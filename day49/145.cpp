@@ -49,33 +49,63 @@ class Node
     Node* next;
 };
 
-void removeduplicate(Node * head){
-    Node * current = head;
-    Node *next_next;
-    if(current==NULL) return ;
-    while(current->next!=NULL){
-        // if(current->data==current->next->data){
-        //     next_next=current->next->next;
-        //     free(current->next);
-        //     current->next=next_next;
-        // }
-        // else{
-        //     current=current->next;
-        // }
-        current_next=current->next;
-        while(current_next->next!=NULL){
-            if(current_next->data==current_next->next->data){
-                next_next=current_next->next->next;
-                free(current_next->next);
-                current_next->next=next_next;
+// void removeduplicate(Node * head){
+//     Node * current= head;
+//     Node * first= head;
+
+//     Node *next_next;
+//     if(current==NULL) return ;
+//     while(current->next!=NULL){
+//         // if(current->data==current->next->data){
+//         //     next_next=current->next->next;
+//         //     free(current->next);
+//         //     current->next=next_next;
+//         // }
+//         // else{
+//         //     current=current->next;
+//         // }
+//         Node* current_next=first->next;
+//         while(current_next->next!=NULL){
+//             if(current_next->data==current_next->next->data){
+//                 next_next=current_next->next->next;
+//                 free(current_next->next);
+//                 current_next->next=next_next;
+//             }
+//             else{
+//                 current_next=current_next->next;
+//             }
+//         }
+        
+//         current=current->next;
+            
+
+//     }
+
+// }
+
+void removeDuplicates(Node* start)
+{
+    Node *ptr1, *ptr2, *dup;
+    ptr1 = start;
+ 
+    /* Pick elements one by one */
+    while (ptr1 != NULL && ptr1->next != NULL) {
+        ptr2 = ptr1;
+ 
+        /* Compare the picked element with rest
+           of the elements */
+        while (ptr2->next != NULL) {
+            /* If duplicate then delete it */
+            if (ptr1->data == ptr2->next->data) {
+                /* sequence of steps is important here */
+                ptr2->next = ptr2->next->next;
+                delete (dup);
             }
-            else{
-                current_next=current_next->next;
-            }
+            else /* This is tricky */
+                ptr2 = ptr2->next;
         }
-
+        ptr1 = ptr1->next;
     }
-
 }
 
 void push(Node** head_ref, int new_data)
@@ -111,7 +141,7 @@ void solution() {
     }
 
     printlist(head);
-    removeduplicate(head);
+    removeDuplicates(head);
     cout<<endl;
     printlist(head);
 
