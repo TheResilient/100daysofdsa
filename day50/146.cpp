@@ -96,6 +96,7 @@ void solution() {
 
     printList(head);
     movetofront(head);
+    cout<<endl;
     printList(head);
 
 }
