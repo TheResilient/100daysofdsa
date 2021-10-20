@@ -87,7 +87,6 @@ void printList(Node *node)
         node = node->next; 
     } 
 } 
-
 void solution() {
     Node *head=NULL;
     push(&head, 4);
