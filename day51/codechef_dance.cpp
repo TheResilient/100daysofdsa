@@ -48,10 +48,11 @@ void solution() {
     cin>>x>>y;
     int z=y-x;
     if(z%2==0) {
-        cout<<z<<endl;
+        cout<<z/2<<endl;
     }
     else{
-        cout<<z+2<<endl;
+        int k=z/2;
+        cout<<k+2<<endl;
     }
 
 }
