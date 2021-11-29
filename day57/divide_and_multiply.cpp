@@ -1,31 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int find(int arr[], int n){
-    sort(arr, arr+n);
-    int maximum = arr[n-1];
-    int minimum=INT_MAX;
-    bool twos=false;
-    int twoid;
+void find(int arr[], int n){
+    int temp=1;
     for(int i=0; i<n; i++){
-        if(arr[i]==2) {
-            twos=true;
-            twoid=i;
-            break;
-        }
-        if(arr[i]<minimum && arr[i]%2==0) {
-            minimum=arr[i];
-            
-            break;
-
+        while(arr[i]%2==0){
+            arr[i]/=2;
+            temp*=2;
         }
     }
-    if(twos){
-        arr[twoid]=arr[twoid]/2;
-    }
-    else{
-        arr[]=arr[n-1]/2;
-    }
-
+    sort(arr,arr+n);
+    arr[n-1]*=temp;
+    long sum=0;
+    for(int i=0; i<n; i++)
+        sum+=arr[i];
+    cout<<sum<<endl;
 }
 
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int arr[n];
+        for(int i=0; i<n; i++){
+            cin>>arr[i];
+        }
+        find(arr,n);
+    }
+    return 0;
+        
+}
