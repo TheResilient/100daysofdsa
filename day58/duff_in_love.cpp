@@ -89,7 +89,7 @@ int main(){
                    flag=0;break;
                }
            }
-           if(flag==1)git 
+           if(flag==1)
             {
                 ans=v[i];break;
             }
