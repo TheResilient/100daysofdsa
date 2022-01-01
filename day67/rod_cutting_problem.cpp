@@ -5,15 +5,16 @@ using namespace std;
 // unbounded knapsack problem
 int rod_cutting_problem(int L, int *price) {
     int n = sizeof(price) / sizeof(price[0]);
-    int dp[n + 1][L + 1];
-    for (int i = 0; i <= n; i++) {
-        for (int j = 0; j <= L; j++) {
-            if (i == 0 || j == 0) {
-                dp[i][j] = 0;
-            } else if (j < price[i - 1]) {
-                dp[i][j] = dp[i - 1][j];
+    int dp[L + 2][L + 2]={0};
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= L; j++) {
+            // if (i == 0 || j == 0) {
+            //     dp[i][j] = 0;
+            if (j >= i) {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - i] + price[i - 1]);
             } else {
-                dp[i][j] = max(dp[i - 1][j], dp[i][j - price[i - 1]] + price[i - 1]);
+                dp[i][j] = dp[i - 1][j];
+                
             }
         }
     }
