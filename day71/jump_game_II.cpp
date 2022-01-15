@@ -2,15 +2,19 @@
 using namespace std;
 
 int jump(vector<int>& nums) {
-    int n = nums.size();
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    vector<int> dp(n, 0);
-    dp[0] = nums[0];
-    for (int i = 1; i < n; i++) {
-        dp[i] = max(dp[i-1], nums[i-1] + i);
+    int curReach =0;
+    int curMax=0;
+    int jumps=0;
+    for(int i=0; i<nums.size()-1; i++){
+        if(i+nums[i]>curReach){
+            curReach=i+nums[i];
+        }
+        if(i==curMax){
+            jumps++;
+            curMax=curReach;
+        }
     }
-    return dp[n-1];
+    return jumps;
 }
 
 int main(){
