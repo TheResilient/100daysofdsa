@@ -12,6 +12,8 @@ for i in df['Entitlements']:
     val = [str(j) for j in i.split(',')]
     # print(val)
     # print(vr50)
-    if len(val)>3: flag=flag+1
+    if len(val)>3: 
+        flag=flag+1
+        print(val)
 
 print(flag)

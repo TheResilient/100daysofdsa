@@ -287,8 +287,8 @@ print(viol[-2])
 print(viol[-3])
 print(viol[-4])
 print(viol[-5])
-dic2=dict(sorted(dic.items(),key= lambda x:x[1]))
-print(dic2)
+print(viol[-5:])
+print(viol[0])
 for i in l: 
     sum=sum+i
 # print(l)
