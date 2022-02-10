@@ -3,10 +3,18 @@ using namespace std;
 
 int removeElement(vector<int>& nums, int val){
     int count=0;
+    int s=nums.size();
+    vector<int>nums1;
     for(int i=0; i<nums.size(); i++){
-        if(nums[i]==val) count++;
+        if(nums[i]==val) {
+            count++;
+        }
+        else{
+            nums1.push_back(nums[i]);
+        }
     }
-    return nums.size()-count;
+    nums=nums1;
+    return s-count;
 }
 
 int main(){
