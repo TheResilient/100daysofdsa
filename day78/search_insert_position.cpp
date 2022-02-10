@@ -2,7 +2,7 @@
 using namespace std;
 
 int serachInsert(vector<int>& nums, int target){
-    if(target<nums[0]) return 1;
+    if(target<nums[0]) return 0;
     else if(target>nums[nums.size()-1]) return nums.size();
     for(int i=0; i<nums.size()-1; i++){
         if(target>=nums[i] and target<=nums[i+1]){
