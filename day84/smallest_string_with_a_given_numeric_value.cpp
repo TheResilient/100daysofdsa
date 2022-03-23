@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string getSmallestString(int n, int k)
+{
+    string s = "";
+    for (int i = 0; i < n; i++)
+        s += 'a';
+    k = k - n;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (k == 0)
+            break;
+        else if (k < 25)
+        {
+            s[i] = (char)('a' + k); // using (char) to convert ASCII to respective character
+            k = 0;
+        }
+        else
+        {
+            s[i] = (char)('a' + 25);
+            k = k - 25;
+        }
+    }
+    return s;
+}
+
+int main(){
+    int n, k;
+    cin>>n>>k;
+    string res = getSmallestString(n, k);
+    cout<<res<<endl;
+    return 0;
+}
