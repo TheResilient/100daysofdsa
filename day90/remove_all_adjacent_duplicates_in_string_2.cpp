@@ -2,16 +2,12 @@
 using namespace std;
 
 string removeDuplicates(string s, int k) {
-    int n = s.size();
-    if (n == 0) return "";
-    int i = 0;
-    int j = 0;
-    while (j < n) {
-        if (s[j] != s[i]) {
-            i++;
-            s[i] = s[j];
-        }
-        j += k;
+    int flag=0;
+    for(int i=0; i<s.length()-3; i++){
+        if(s[i]==s[i+1] and s[i+1]==s[i+2]) flag=1;
     }
-    return s.substr(0, i + 1);
+    if(flag=0){
+        return s;
+    }
+    
 }
