@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     int n,m; cin>>n>>m;
     long long int a=n;
-    for(int i=n; i<=m; i++){
+    for(int i=n+1; i<=m; i++){
         a=a*i;
         // cout<<n<<endl;
     }
