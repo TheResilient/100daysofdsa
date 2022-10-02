@@ -11,8 +11,8 @@ int countVowelStrings(int n)
 }
 
 int main(){
-    int n;
-    cin>>n;
-    cout<<countVowelStrings(n);
+    int a;
+    cin>>a;
+    cout<<countVowelStrings(a);
     return 0;
 }
