@@ -42,7 +42,7 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-
+//solution
 void solution() {
     int n;
     cin>>n;
