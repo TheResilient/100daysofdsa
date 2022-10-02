@@ -52,7 +52,7 @@ void pattern(int n){
 
 
 int main(){
-    int n;
-    cin>>n;
-    pattern(n);
+    int t;
+    cin>>t;
+    pattern(t);
 }
