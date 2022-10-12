@@ -15,7 +15,7 @@ int hammingWeight(uint32_t n)
 }
 
 int main(){
-    uint32_t n; cin>>n;
-    cout<<hammingWeight(n)<<endl;
+    uint32_t k; cin>>k;
+    cout<<hammingWeight(k)<<endl;
     return 0;
 }
