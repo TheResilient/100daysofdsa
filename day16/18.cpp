@@ -42,7 +42,6 @@ const int N = 3e5;
 vi v[N];
 int a[N];
 
-
 void solution() {
     int n;
     cin>>n;
@@ -57,6 +56,7 @@ void solution() {
         if(max<maxend) max=maxend;
     }
     cout<<max<<endl;
+    return 0;
 
 }
 int main() {
