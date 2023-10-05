@@ -9,6 +9,15 @@ int fib(int n){
     return fib(n-1) + fib(n-2);
 }
 
+int fib2(int n){
+    int first=1;
+    int second=2;
+    for(int i=0; i<n; i++){
+        second=first+second;
+    }
+    return second;
+}
+
 int main(){
     int n;
     cin>>n;
